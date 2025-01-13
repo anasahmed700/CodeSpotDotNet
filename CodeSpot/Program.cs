@@ -33,6 +33,7 @@ using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     RoleSeeder.SeedRolesAsync(services).Wait();
+    UserSeeder.SeedUsersAsync(services).Wait();
 }
 
 app.UseHttpsRedirection();
